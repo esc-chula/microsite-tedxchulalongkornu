@@ -1,15 +1,11 @@
 import { Dispatch, SetStateAction } from "react"
 
 export default function ChoiceButton({
-  points,
-  setScore,
   setPage,
   toPage,
   onClick,
   text,
 }: {
-  points: number
-  setScore: Dispatch<SetStateAction<number>>
   setPage: Dispatch<SetStateAction<number>>
   onClick?: () => void
   toPage: number
@@ -18,7 +14,6 @@ export default function ChoiceButton({
   return (
     <button
       onClick={() => {
-        setScore((score) => score + points)
         setPage((page) => toPage)
 
         onClick && onClick()
